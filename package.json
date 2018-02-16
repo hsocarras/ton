@@ -1,0 +1,29 @@
+{
+  "name": "plc-ton",
+  "version": "0.1.0",
+  "description": "plc based ton timer",
+  "main": "src/ton.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "plc",
+    "ton",
+    "timer"
+  ],
+  "author": {
+    "name": "Héctor E. Socarrás Cabrera",
+    "email": "hsocarras1987@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hsocarras/ton"
+  },
+  "bugs": {
+    "url": "https://github.com/hsocarras/ton/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "wiring.io": "^0.1.1"
+  }
+}
