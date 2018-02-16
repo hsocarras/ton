@@ -30,9 +30,12 @@ myTimer.Start();
 * args 
 
 **preset** Defines the preset value for the timer in ms. Default is 1000 (1s).
+
 **retentive** Set true or false the retentive behavior. When the retentive is false (default), the property Ton.V is reset when Ton.Stop is called. Counting restarts from 0.
 When the retentive is true, the timer retains its value when Ton.Stop is called before the Preset value is reached. Counting restarts from this value.
+
 **callback** Function to call when the preset value is reached.
+
 **args** arguments to pass to a callback function.
 
 
@@ -49,32 +52,38 @@ let timer3 = new Ton('500', Foo, 'running');
 ### `isRetentive`
 
 Type: {boolean}
+
 Indicate the retentive behavior of the timer. See retentive description on constructor secction.
 
 ### `isRunning`
 
 Type: {boolean}
+
 Indicate the running status of the timer.
 
 ### `P`
 
 Type: {number}
+
 Indicate the preset value of the timer.
 
 ### `Q`
 
 Type: {boolean}
+
 Timer output. Indicate the preset value was reached.
 
 ### `tick`
 
 Type: {Wiring.Signal}
+
 A signal that is emited by timer when the preset value was reached.
 See wiring.io for mor details about signal and slots.
 
 ### `V`
 
 Type: {number}
+
 Value that increments from 0 to the preset value timer.P when the timer is running. The value can be read and tested, but not written to
 
 ## Timer Methods
@@ -117,7 +126,7 @@ function Report(action, date1){
 let timer1 = new Ton(2000)
 timer1.SetAction(Report, 'Total Time', Date.now());
 timer1.Start()
-//After 2s -> Total Time: 2000
+//Total Time: 2000
 
 ```
 
